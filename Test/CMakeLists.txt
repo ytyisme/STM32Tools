@@ -142,6 +142,16 @@ add_executable(ml307_mqtt_control_test
 target_include_directories(ml307_mqtt_control_test PRIVATE ../Inc)
 add_test(NAME ml307_mqtt_control_test COMMAND ml307_mqtt_control_test)
 
+add_executable(ewm103_mqtt_security_test
+    ewm103_mqtt_security_test.c
+    ../Src/EWM103/ewm103.c
+    ../Src/EWM103/ewm103_at.c
+    ../Src/EWM103/ewm103_parser.c
+    ../Src/AT/at_codec.c
+    ../Src/AT/ModuleFrameParser.c)
+target_include_directories(ewm103_mqtt_security_test PRIVATE ../Inc)
+add_test(NAME ewm103_mqtt_security_test COMMAND ewm103_mqtt_security_test)
+
 include("${CMAKE_CURRENT_LIST_DIR}/ConsolidatedTests.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/AuditTests.cmake")
 add_executable(storage_log_stream_test storage_log_stream_test.c
