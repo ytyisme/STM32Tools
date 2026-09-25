@@ -116,6 +116,8 @@ const char *ML307_TypeName(ML307_Type type)
     return "MQTT_SUB";
   case ML307_TYPE_MQTT_PUBLISH:
     return "MQTT_PUB";
+  case ML307_TYPE_MQTT_SSL_CONFIG:
+    return "MQTT_SSL";
   default:
     return "?";
   }
@@ -150,6 +152,10 @@ ML307_Result ML307_Pack(const ML307_Content *content, char *packet,
   case ML307_TYPE_MQTT_CLEAN:
     result = ML307_MqttBuildCleanSession(packet, packet_size, content->id,
                                          content->flag);
+    break;
+  case ML307_TYPE_MQTT_SSL_CONFIG:
+    result = ML307_MqttBuildSslConfig(packet, packet_size, content->id,
+                                      content->flag, content->ssl_id);
     break;
   case ML307_TYPE_MQTT_CONNECT:
     result = ML307_MqttBuildConnect(
@@ -205,7 +211,8 @@ ML307_Result ML307_Unpack(const char *packet, ML307_Type expect,
       (expect == ML307_TYPE_MQTT_SUBSCRIBE) ||
       (expect == ML307_TYPE_MQTT_PUBLISH) ||
       (expect == ML307_TYPE_MQTT_CLEAN) ||
-      (expect == ML307_TYPE_MQTT_DISCONNECT)) {
+      (expect == ML307_TYPE_MQTT_DISCONNECT) ||
+      (expect == ML307_TYPE_MQTT_SSL_CONFIG)) {
     if (ML307_MqttResponseHasError(packet) != 0) {
       out->error = 1U;
       AT_CopyString(out->name, sizeof(out->name), "ERROR", NULL);
