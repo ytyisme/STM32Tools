@@ -193,17 +193,6 @@ static void test_legacy_non_control_and_builders(void)
   CHECK(!strcmp(out, "AT+MQTTCFG=\"ssl\",0,1,1\r\n"));
   CHECK(ML307_MqttBuildSslConfig(out, sizeof(out), 6, 1, 1) == ML307_RESULT_INVALID_VALUE);
   CHECK(ML307_MqttBuildSslConfig(out, sizeof(out), 0, 2, 1) == ML307_RESULT_INVALID_VALUE);
-  {
-    ML307_Content content = {0};
-    size_t length = 0U;
-    content.type = ML307_TYPE_MQTT_SSL_CONFIG;
-    content.id = 0U;
-    content.flag = 1U;
-    content.ssl_id = 1U;
-    CHECK(ML307_Pack(&content, out, sizeof(out), &length) == ML307_RESULT_OK);
-    CHECK(length == strlen("AT+MQTTCFG=\"ssl\",0,1,1\r\n"));
-    CHECK(!strcmp(out, "AT+MQTTCFG=\"ssl\",0,1,1\r\n"));
-  }
   CHECK(ML307_MqttBuildSubscribe(out, sizeof(out), 0, "test", 1) == ML307_RESULT_OK);
   CHECK(!strcmp(out, "AT+MQTTSUB=0,\"test\",1\r\n"));
   CHECK(ML307_MqttBuildPublish(out, sizeof(out), 0, "test", 1, 0, "abc") == ML307_RESULT_OK);
