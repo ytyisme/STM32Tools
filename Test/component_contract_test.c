@@ -14,6 +14,17 @@ int main(void) {
   ML307_MqttEvent event;
   assert(ML307_MqttBuildDisconnect(command, sizeof(command), 0U) == ML307_RESULT_OK);
   assert(strcmp(command, "AT+MQTTDISC=0\r\n") == 0);
+  {
+    ML307_Content ssl = {0};
+    size_t length = 0U;
+    ssl.type = ML307_TYPE_MQTT_SSL_CONFIG;
+    ssl.id = 0U;
+    ssl.flag = 1U;
+    ssl.ssl_id = 1U;
+    assert(ML307_Pack(&ssl, command, sizeof(command), &length) == ML307_RESULT_OK);
+    assert(length == strlen("AT+MQTTCFG=\"ssl\",0,1,1\r\n"));
+    assert(strcmp(command, "AT+MQTTCFG=\"ssl\",0,1,1\r\n") == 0);
+  }
   assert(ML307_MqttParseUrc("+MQTTURC: \"suback\",0,42,1", &event) == ML307_RESULT_OK);
   assert(event.message_id == 42U);
   AHT20_Device aht;
