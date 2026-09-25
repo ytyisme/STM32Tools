@@ -44,7 +44,8 @@ typedef enum {
   ML307_TYPE_MQTT_CLEAN,
   ML307_TYPE_MQTT_CONNECT,
   ML307_TYPE_MQTT_SUBSCRIBE,
-  ML307_TYPE_MQTT_PUBLISH
+  ML307_TYPE_MQTT_PUBLISH,
+  ML307_TYPE_MQTT_SSL_CONFIG
 } ML307_Type;
 
 /** Content to pack. Unused fields may be NULL / 0. */
@@ -54,6 +55,7 @@ typedef struct {
   uint8_t flag;     /**< MQTT clean_session (0/1) */
   uint8_t qos;      /**< MQTT QoS */
   uint8_t retain;   /**< MQTT retain */
+  uint8_t ssl_id;   /**< MQTT SSL context id (0..5) */
   uint16_t port;    /**< MQTT port */
   const char *host; /**< MQTT host / subscribe-publish topic */
   const char *client_id;
