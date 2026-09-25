@@ -32,6 +32,14 @@ typedef enum {
 } EWM103_Result;
 
 typedef enum {
+  EWM103_MQTT_SCHEME_TCP = 1,
+  EWM103_MQTT_SCHEME_TLS_NO_VERIFY = 2,
+  EWM103_MQTT_SCHEME_TLS_VERIFY_SERVER = 3,
+  EWM103_MQTT_SCHEME_TLS_CLIENT_CERT = 4,
+  EWM103_MQTT_SCHEME_TLS_MUTUAL = 5
+} EWM103_MqttScheme;
+
+typedef enum {
   /* System */
   EWM103_TYPE_AT = 0,
   EWM103_TYPE_CMD,
@@ -102,10 +110,11 @@ typedef enum {
  * query!=0 uses AT+NAME? when the command supports it.
  *
  * Common string mapping:
- *  s0: ssid / host / domain / topic / type("TCP") / mac / ip
- *  s1: pwd / remote_ip / username / path / gateway
- *  s2: bssid / client_id / netmask / SNTP server
- *  s3: password / path (MQTTUSERCFG) / SNTP server1
+ *  s0: ssid / host / domain / topic / type("TCP") / mac / ip /
+ *      MQTTUSERCFG client_id
+ *  s1: pwd / remote_ip / MQTTUSERCFG username / path / gateway
+ *  s2: bssid / MQTTUSERCFG password / netmask / SNTP server
+ *  s3: MQTTUSERCFG path / SNTP server1
  *  s4: MQTT path / extra
  *  s5: MQTTUSERCFG path leftover / data for MQTTPUB
  */
