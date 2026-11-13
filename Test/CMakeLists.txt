@@ -190,6 +190,7 @@ target_include_directories(strict_snapshot_recovery_test PRIVATE ../Inc)
 target_compile_options(strict_snapshot_recovery_test PRIVATE
     $<$<C_COMPILER_ID:GNU,Clang>:-Wall;-Wextra;-Werror;-UNDEBUG>)
 add_test(NAME strict_snapshot_recovery_test COMMAND strict_snapshot_recovery_test)
+include("${CMAKE_CURRENT_LIST_DIR}/SourceLayoutTests.cmake")
 stm32tools_finalize_host_tests()
 
 

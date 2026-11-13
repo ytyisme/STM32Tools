@@ -17,10 +17,11 @@ STM32Tools 是面向 STM32 项目的可复用嵌入式组件库。仓库提供�
 
 ```text
 STM32Tools/
-├── Inc/                    公共头文件和模块接口
-├── Src/                    可复用实现及平台 Port
+├── Inc/                    自有公共接口及旧路径兼容转发头
+├── Src/                    自有实现及旧路径兼容转发源
 ├── Test/                   宿主测试
-├── ThirdParty/              固定版本第三方依赖
+├── ThirdParty/             coreMQTT、nanopb、TraceRecorder、SEGGER_RTT、monocypher
+├── Drivers/                按需 Camera、Radio、STM32L0 EEPROM、EPD 驱动
 ├── Examples/BootloaderSTM32F411/  Bootloader 参考工程
 ├── Examples/LegacyF103/    旧 STM32F103 整板示例，不属于库源码
 ├── LICENSE
@@ -173,9 +174,45 @@ ctest --test-dir build/test --output-on-failure
 
 关键测试包括按键状态机、AT 通道恢复、MQTT 行收集、DualBank 事务和存储/Bootloader 策略。
 
-## 许可证
+## 可选代码布局、来源与许可证
 
-见 `LICENSE`。
+2026-11-13 复核确认：第三方源码和其他板型驱动混排在 `Inc/` / `Src/`，
+根许可证说明没有区分第三方条款。这是维护与来源追踪问题。本次把 98 个文件的
+唯一实现迁到 `ThirdParty/` / `Drivers/`，旧路径只保留转发文件，不复制算法。
+`cmake/source-layout.json` 保存逐文件映射和 SHA-256；97 个实现文件保持字节不变；OV2640 头中唯一相对 include 改为 `<Common/camera.h>`，
+让消费方补入的公共相机头仍可经原 include 根解析。
+不会伪称这些历史副本是未经修改的完整上游发行版，也没有顺带升级依赖。
+
+| 组件 | 唯一实现位置 | 可确认来源 / 版本 | 许可证与待核实边界 |
+|---|---|---|---|
+| coreMQTT | `ThirdParty/coreMQTT/{Inc,Src}/MQTT` | [FreeRTOS/coreMQTT](https://github.com/FreeRTOS/coreMQTT)，源码标记 v2.1.1，配置头标记 v2.1.0 | 文件内 MIT 全文保留；配置包含示例 NetworkContext，产品须自选配置/transport，非直接接网实现 |
+| nanopb | `ThirdParty/nanopb/{Inc,Src}/pb` | [nanopb 0.4.9.1](https://github.com/nanopb/nanopb/tree/0.4.9.1)，`pb.h` 版本；本地使用 `pb/` include 前缀 | [zlib 许可证](ThirdParty/nanopb/LICENSE.txt) 已补齐，取自该上游 tag；不使用根 MIT 替代 |
+| Trace Recorder | `ThirdParty/TraceRecorder/{Inc,Src}/Tracealzer` | [Percepio TraceRecorderSource](https://github.com/percepio/TraceRecorderSource)，文件标记 v4.8.0.hotfix1，带 FreeRTOS/config/stream port | 文件 SPDX 为 Apache-2.0；[许可证全文](ThirdParty/TraceRecorder/LICENSE.md) 补自上游 LICENSE.md（blob 261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64）。历史拼写 Tracealzer 仅为兼容；上游精确提交仍未证明 |
+| SEGGER RTT | `ThirdParty/SEGGER_RTT/{Inc,Src}/Tracealzer` | 原文件标记 SEGGER RTT 6.00e | 原文件的专有条款原样保留：限 J-Link 通信，修改版本分发有额外限制；不是 MIT，也不被 Trace Recorder 的 Apache 许可覆盖 |
+| Monocypher | `ThirdParty/monocypher` | [现有来源记录](ThirdParty/monocypher/PROVENANCE.md)，4.0.2 | 原 `LICENCE.md`：BSD-2-Clause OR CC0-1.0，未移动/升级 |
+| OV2640/OV5640 | `Drivers/Camera/{Inc,Src}/Camera` | 原文件标记 STMicroelectronics / MCD Application Team，含本地改写 | 头部要求组件自身 LICENSE；历史副本没有可证明对应版本的许可证记录，不能由根 MIT 代替。发布/复用前须补证来源及对应许可；本次不杜撰授权 |
+| RF24L01、L051C8T6 EEPROM、UC8253 EPD | `Drivers/Radio`、`Drivers/STM32L0`、`Drivers/EPD` | 仓库历史驱动；EEPROM/EPD 带本地作者信息，RF24L01 作者栏为空 | 仓库自有代码适用根 [LICENSE](LICENSE)，不能据此断言所有历史素材的上游来源已审计；继续保留原标记 |
+
+### 构建选择与兼容迁移
+
+- 新工程可显式链接 `STM32Tools::CoreMQTT` / `STM32Tools::Nanopb`，它们选用
+  canonical 源码，不自动引入 HAL、相机、RTT 或其他外围驱动。
+- 既有工程显式列出的 `Src/MQTT/*.c`、`Src/pb/*.c` 等旧源路径及旧头文件路径仍存在，
+  通过转发编译唯一实现。**同一目标只能选择旧源路径或 canonical 源路径之一**；
+  不要递归 glob 整个仓库，否则会重复定义符号。修改实现只编辑 canonical 文件，
+  同步更新清单摘要，并运行 `source_layout_test` 防止旧路径再次长出实现副本。
+- Trace Recorder、RTT 和外围驱动保留供按需集成，不列入默认公共组件聚合。
+  这次目录整理不是这些历史驱动的移植或实板认证。例如 OV2640 原来就依赖未随仓库
+  提供的 `Common/camera.h`；L051 EEPROM 要 STM32L0 HAL/EEPROM 地址宏，RF24L01 要
+  SPI/板级绑定，EPD 要对应显示后端和 GPIO/RTOS 配置。不能因未被某产品链接就删除，
+  也不能据宿主测试声称它们均可上板。
+- 当前 Agriculture_Hardware 的显式 CMake 清单使用 ML307/EWM103 模组 MQTT、手写
+  `TaskProtoDecoder`、ST7305，不选择 coreMQTT、nanopb、Trace Recorder、RTT、Camera、
+  RF24L01、L051 EEPROM 或 EPD。本库保留这些通用/其他板型组件，不扩大该产品的固件输入。
+- 新增两个独立可执行测试，分别从 canonical target 和旧源路径编译/链接全部
+  coreMQTT/nanopb 源码，并验证 MQTT PINGREQ 编码/小缓冲拒绝、nanopb varint 往返。
+  清单测试校验全部 98 个转发及实现摘要。这些测试不代表真实网络、相机、射频或探针测试。
+
 
 ## Consolidated correctness and component contracts
 
