@@ -194,3 +194,21 @@ add_library(stm32tools_ewm103 ALIAS stm32tools_EWM103)
 add_library(stm32tools_iwdg_f4 ALIAS stm32tools_IwdgSTM32F4)
 add_library(stm32tools_bootloader_f4 ALIAS stm32tools_BootloaderSTM32F4)
 add_library(stm32tools_health_monitor ALIAS stm32tools_HealthMonitor)
+
+# Optional vendored protocol components. Their implementations live only under
+# ThirdParty; the old Inc/Src files are compatibility forwarders, not a second
+# copy. Never link a legacy source path and this target in the same executable.
+_stm32tools_component(CoreMQTT
+    ThirdParty/coreMQTT/Src/MQTT/core_mqtt.c
+    ThirdParty/coreMQTT/Src/MQTT/core_mqtt_serializer.c
+    ThirdParty/coreMQTT/Src/MQTT/core_mqtt_state.c)
+target_include_directories(stm32tools_CoreMQTT INTERFACE
+    "${CMAKE_CURRENT_LIST_DIR}/../ThirdParty/coreMQTT/Inc"
+    "${CMAKE_CURRENT_LIST_DIR}/../ThirdParty/coreMQTT/Inc/MQTT")
+_stm32tools_component(Nanopb
+    ThirdParty/nanopb/Src/pb/pb_common.c
+    ThirdParty/nanopb/Src/pb/pb_encode.c
+    ThirdParty/nanopb/Src/pb/pb_decode.c)
+target_include_directories(stm32tools_Nanopb INTERFACE
+    "${CMAKE_CURRENT_LIST_DIR}/../ThirdParty/nanopb/Inc"
+    "${CMAKE_CURRENT_LIST_DIR}/../ThirdParty/nanopb/Inc/pb")

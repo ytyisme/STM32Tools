@@ -1,24 +1,3 @@
-/*
- * Trace Recorder for Tracealyzer v4.8.0.hotfix1
- * Copyright 2023 Percepio AB
- * www.percepio.com
- *
- * SPDX-License-Identifier: Apache-2.0
- *
- * Kernel port configuration parameters for streaming mode.
- */
-
-#ifndef TRC_KERNEL_PORT_STREAMING_CONFIG_H
-#define TRC_KERNEL_PORT_STREAMING_CONFIG_H
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-/* Nothing yet */
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif /* TRC_KERNEL_PORT_STREAMING_CONFIG_H */
+/* Compatibility forwarding file. Canonical implementation: ThirdParty/TraceRecorder/Inc/Tracealzer/trcKernelPortStreamingConfig.h.
+ * Select this source OR its canonical source, never both. See README.md. */
+#include "../../ThirdParty/TraceRecorder/Inc/Tracealzer/trcKernelPortStreamingConfig.h"

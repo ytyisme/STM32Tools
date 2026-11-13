@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "migration_base": "e70901ffb4ad7e6b72a43342e59882a2714d4e97",
+  "files": [
+    {
+      "legacy": "Inc/MQTT/core_mqtt.h",
+      "canonical": "ThirdParty/coreMQTT/Inc/MQTT/core_mqtt.h",
+      "sha256": "d6116267118d72a73e8fb66debea775760916d962b416060cd507f9279dedc0b"
+    },
+    {
+      "legacy": "Inc/MQTT/core_mqtt_config.h",
+      "canonical": "ThirdParty/coreMQTT/Inc/MQTT/core_mqtt_config.h",
+      "sha256": "c517fa656d05c2818c6ad29f315412db15462134e68d3d0aa56f1bdc92404c4c"
+    },
+    {
+      "legacy": "Inc/MQTT/core_mqtt_config_defaults.h",
+      "canonical": "ThirdParty/coreMQTT/Inc/MQTT/core_mqtt_config_defaults.h",
+      "sha256": "12518a3a54aebb317a3521a7f6717583561df7215773ac2b07ad960d685d351a"
+    },
+    {
+      "legacy": "Inc/MQTT/core_mqtt_default_logging.h",
+      "canonical": "ThirdParty/coreMQTT/Inc/MQTT/core_mqtt_default_logging.h",
+      "sha256": "0363d364355770d16e8ec32b6219e8ddd7ec8acf8f8957957ba794095a88ba74"
+    },
+    {
+      "legacy": "Inc/MQTT/core_mqtt_serializer.h",
+      "canonical": "ThirdParty/coreMQTT/Inc/MQTT/core_mqtt_serializer.h",
+      "sha256": "067a4852e55e9d43e77c0aa295291c402c55707dc5b141af993a12e6f9631f86"
+    },
+    {
+      "legacy": "Inc/MQTT/core_mqtt_state.h",
+      "canonical": "ThirdParty/coreMQTT/Inc/MQTT/core_mqtt_state.h",
+      "sha256": "97597d631969ee904d25b5240b0d076a56e2b1ae2f0883166fc6d0a48a2e86a4"
+    },
+    {
+      "legacy": "Inc/MQTT/transport_interface.h",
+      "canonical": "ThirdParty/coreMQTT/Inc/MQTT/transport_interface.h",
+      "sha256": "75672c737a8dc232dfd4982110b463c802b030311a3a263eacce679db7474d67"
+    },
+    {
+      "legacy": "Inc/pb/pb.h",
+      "canonical": "ThirdParty/nanopb/Inc/pb/pb.h",
+      "sha256": "a2ecdca9fdaeef5f4972ed983540c0d6fb0a5c402a2e0b0349d7e1bc5e188d29"
+    },
+    {
+      "legacy": "Inc/pb/pb_common.h",
+      "canonical": "ThirdParty/nanopb/Inc/pb/pb_common.h",
+      "sha256": "6495a691aca68d6973f2274b5dd54b74fbb57f6b019c45fff255a857fe1abcfd"
+    },
+    {
+      "legacy": "Inc/pb/pb_decode.h",
+      "canonical": "ThirdParty/nanopb/Inc/pb/pb_decode.h",
+      "sha256": "1747746e5961de5789bcf0795588da0790cd18b2e4e706ad9c7099a0fa1cc83f"
+    },
+    {
+      "legacy": "Inc/pb/pb_encode.h",
+      "canonical": "ThirdParty/nanopb/Inc/pb/pb_encode.h",
+      "sha256": "9aa00fee4ff08adf0da16e33a55be08810ea657800a648dc78f82e89c60c10cf"
+    },
+    {
+      "legacy": "Inc/Tracealzer/SEGGER_RTT.h",
+      "canonical": "ThirdParty/SEGGER_RTT/Inc/Tracealzer/SEGGER_RTT.h",
+      "sha256": "5da6bbb8b2d11faf2b948b00da9af146bd68dbb51245578e7167a1cb77ef9e5c"
+    },
+    {
+      "legacy": "Inc/Tracealzer/SEGGER_RTT_Conf.h",
+      "canonical": "ThirdParty/SEGGER_RTT/Inc/Tracealzer/SEGGER_RTT_Conf.h",
+      "sha256": "231b7db1562922b395620e05937ebc6438e0f0323bd95057b987294b0872a510"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcAssert.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcAssert.h",
+      "sha256": "ea42168092765fc9723252c3b251dd75afe770139560d62f5181438e381a7316"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcConfig.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcConfig.h",
+      "sha256": "0e1ebc074bb34969dc8264c7c1a0e40e8df93871db6b4f5c3e3e2240dc2895e5"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcCounter.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcCounter.h",
+      "sha256": "0f5f1d9a07cb3e75a7c7e1f127031f6b0f794168b84b51e90390cb584a776a7c"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcDefines.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcDefines.h",
+      "sha256": "d7989513abe0908ddb4b8a11600e211f6525d9af232dfae4aedc2e5b23b45834"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcDependency.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcDependency.h",
+      "sha256": "1a72a363dbc805494be045462d9d364eab2718ba9e3377fb1f2ededd57c53348"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcDiagnostics.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcDiagnostics.h",
+      "sha256": "66147264c8037670d5955b3ac7b1c66520161014e1d20a2755f6b907f11d344f"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcEntryTable.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcEntryTable.h",
+      "sha256": "7004d4cbc58ac29d8755748a3c18caa1e8800429649084e84305a6e8dc363321"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcError.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcError.h",
+      "sha256": "5b9e7684b1448af2871316f485d79cb9ec45f42142ada05fdc826217612d510b"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcEvent.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcEvent.h",
+      "sha256": "39afd2c35ba04bd33e74bdd7b6bdb2c86f0f4e4a46545aaf4e0869556c1e969c"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcEventBuffer.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcEventBuffer.h",
+      "sha256": "f765f6bf9e44f6ecdbe31a0afbd7ed3be02679af1dbd17aa43f6bf8eda604ab5"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcExtension.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcExtension.h",
+      "sha256": "99191ccc69046e900418a5630b01562115c8e0698a95cdb37486e2c5253c4164"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcHardwarePort.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcHardwarePort.h",
+      "sha256": "f796857f499887a13f7d470f98b58f4ccd58d014e8ae104158d1c539f0695224"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcHeap.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcHeap.h",
+      "sha256": "5fb9d2f54d34ca12730c293a143296a80019d6e331c2901d5aa7dcd99a2fbc0f"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcISR.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcISR.h",
+      "sha256": "b38dafedbbd3a8a3fa346a23bf8cbec2acccf2d3c75344234292edc1e388ee65"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcInternalEventBuffer.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcInternalEventBuffer.h",
+      "sha256": "e77282c7e9ac49f239d900f90f223e1c2a066e6ba9c2c9eea1cb35e8f727dc7d"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcInterval.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcInterval.h",
+      "sha256": "f5eee3d5c4dc9ff127d8ab0d3d84c7a44d0e5ed2b2e7575b4a6ee53a000c938f"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcKernelPort.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcKernelPort.h",
+      "sha256": "a50e311e5a15ea4bfdf9a9e90212a3688736b0ba6c1e79f80c7f5edf0c421dba"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcKernelPortConfig.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcKernelPortConfig.h",
+      "sha256": "22b4f2aa5ec43f654ff6959c02bf2b831e569704fb34ca675315f09de22f1069"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcKernelPortSnapshotConfig.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcKernelPortSnapshotConfig.h",
+      "sha256": "74fc5de769222e6c4c9759f0195e25fde5ff4d2e2194e3c981eca8f166990144"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcKernelPortStreamingConfig.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcKernelPortStreamingConfig.h",
+      "sha256": "e405f2c3e21d9d1d6584ee29e4d4a6d04eee8ad3ceb942b4643b8770c43a4553"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcMultiCoreEventBuffer.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcMultiCoreEventBuffer.h",
+      "sha256": "14a63945c28749b17096da18d173edae485fb72c8e13accbfb120d17bc26ed49"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcObject.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcObject.h",
+      "sha256": "84ad92ff0d44d3d660ed49f3a9523b3ed5a78c4ec12d895a85f89eb7380fc8da"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcPrint.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcPrint.h",
+      "sha256": "2031d5365a389ee208356e551361f4f70c34276348fe5fa65d3378d4ea989316"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcRecorder.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcRecorder.h",
+      "sha256": "09dccff44639fc70447be2fee69d7c9a661e1e6f0bbf78f17e345ca8d023de6c"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcRunnable.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcRunnable.h",
+      "sha256": "792288068a4e0b67f61b54961b1d65f2c46d41177bd507313afcfe2ae35e28c4"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcStackMonitor.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcStackMonitor.h",
+      "sha256": "f9a42b6b848a550b8c9493af331c725b60f499600e960b0e30c6622b81cb7e7e"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcStateMachine.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcStateMachine.h",
+      "sha256": "d466288d823fad13504f3556449dd283bc974a86b0991c5ebdf6d151ce810866"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcStaticBuffer.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcStaticBuffer.h",
+      "sha256": "ac2d6af81452b602aac815844718dd4c5035407e816cb859f934253137e44d9f"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcStreamPort.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcStreamPort.h",
+      "sha256": "c6e0ec973bd11d914e0e94ca562281e8be4d2d3a4f28051d226656640a415eb6"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcStreamPortConfig.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcStreamPortConfig.h",
+      "sha256": "1bf2843e49403aaefed8348e4bccc6e1c67d9813a0ed588e9d2cb5e2b9b9d8bc"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcStreamingConfig.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcStreamingConfig.h",
+      "sha256": "8b65078c985d729fc0069bd764ff575d30ad5c1af1dd0ff66db8ca3d3b8ec38d"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcString.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcString.h",
+      "sha256": "b2a263a96b7307269f326bfb25f5f2fce00148d05cfb1993a219151ba9f2aeba"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcTask.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcTask.h",
+      "sha256": "d39eb38fec63afc827c68838cb7c5f1c6e2e6d42859c558b4f362b173c6ff247"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcTimestamp.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcTimestamp.h",
+      "sha256": "5a8247ff892bee51400690f094ac1a0f3903625a922bcc8d25de22a4c625d560"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcTypes.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcTypes.h",
+      "sha256": "a6d4bf09e1bf6233d9253bd77b0fe7f4d4a004512caa92a5846570269c58b742"
+    },
+    {
+      "legacy": "Inc/Tracealzer/trcUtility.h",
+      "canonical": "ThirdParty/TraceRecorder/Inc/Tracealzer/trcUtility.h",
+      "sha256": "8915c2c7bcf38e55d6c013274ac1e9f3867c97a8c255a5bd2e7f3f91879ed32d"
+    },
+    {
+      "legacy": "Inc/Camera/ov2640.h",
+      "canonical": "Drivers/Camera/Inc/Camera/ov2640.h",
+      "sha256": "f67fc7c47d86a91022ec807b10b6c7b323580a9c1eba99280e6992511803df79",
+      "migration_sha256": "e2b410cd408a8364264c2f74be56d1c72c25b7da75090b020aca6aec053459da",
+      "change": "Resolve the consumer-supplied Common/camera.h through the include root after relocation."
+    },
+    {
+      "legacy": "Inc/Camera/ov5640.h",
+      "canonical": "Drivers/Camera/Inc/Camera/ov5640.h",
+      "sha256": "adb15e75906877143adfbde8cbaa92f9e5a3a57bfaa9f8cc0b95f0e6e3f8a4b0"
+    },
+    {
+      "legacy": "Inc/Camera/ov5640_reg.h",
+      "canonical": "Drivers/Camera/Inc/Camera/ov5640_reg.h",
+      "sha256": "8e2efd39e557fa4325efb9a995b574a198012c6e0b35bb12bf2d5cc1c7fa657d"
+    },
+    {
+      "legacy": "Inc/Camera/ov5640_user.h",
+      "canonical": "Drivers/Camera/Inc/Camera/ov5640_user.h",
+      "sha256": "e3b86cac11b85b9763e02f093d7bc35e9985ea8f0cf41dd222fbf240a7951127"
+    },
+    {
+      "legacy": "Inc/L051C8T6/Eeprom.h",
+      "canonical": "Drivers/STM32L0/Inc/L051C8T6/Eeprom.h",
+      "sha256": "f5fbd731e4bb311de3dba83570705feaa057e1af2b3aef3ed664cd07a2f79ea7"
+    },
+    {
+      "legacy": "Inc/Display/EPD/epd.h",
+      "canonical": "Drivers/EPD/Inc/Display/EPD/epd.h",
+      "sha256": "dfa20c0935d423fbde278d2a3f9d4309712add48a679cb17e1b82f157f35c06c"
+    },
+    {
+      "legacy": "Inc/Display/EPD/epd_config.h",
+      "canonical": "Drivers/EPD/Inc/Display/EPD/epd_config.h",
+      "sha256": "f69976ced0544f36ce9351cdda23f67b56c786679cd532dea0b66e825033f260"
+    },
+    {
+      "legacy": "Inc/RF24L01.h",
+      "canonical": "Drivers/Radio/Inc/RF24L01.h",
+      "sha256": "d98a8e841a4917bcf96c21587a0a9f5804af2e0107faab628c1ed8a641b71d8d"
+    },
+    {
+      "legacy": "Src/MQTT/core_mqtt.c",
+      "canonical": "ThirdParty/coreMQTT/Src/MQTT/core_mqtt.c",
+      "sha256": "e39e0ff594f260c85c18bf6256baad71184e3e5448a205247d107810a19699ce"
+    },
+    {
+      "legacy": "Src/MQTT/core_mqtt_serializer.c",
+      "canonical": "ThirdParty/coreMQTT/Src/MQTT/core_mqtt_serializer.c",
+      "sha256": "e74298266a7d6fdcc210b901bd256535e2d04fe3790bfb2f47738b83a51e00db"
+    },
+    {
+      "legacy": "Src/MQTT/core_mqtt_state.c",
+      "canonical": "ThirdParty/coreMQTT/Src/MQTT/core_mqtt_state.c",
+      "sha256": "1dae7c75ae8bd1be85f46ae7851afcceea885a859efc9ec4a4d3e672d666e89e"
+    },
+    {
+      "legacy": "Src/pb/pb_common.c",
+      "canonical": "ThirdParty/nanopb/Src/pb/pb_common.c",
+      "sha256": "3b88dadbd611e2893c0793e5b22532a5330b7b244c06dd09b3dbe6c20d7ef855"
+    },
+    {
+      "legacy": "Src/pb/pb_decode.c",
+      "canonical": "ThirdParty/nanopb/Src/pb/pb_decode.c",
+      "sha256": "ed7e2f7b942c62987df696f59196ae60658aa1c134b92d983ac7189e6b3c2adc"
+    },
+    {
+      "legacy": "Src/pb/pb_encode.c",
+      "canonical": "ThirdParty/nanopb/Src/pb/pb_encode.c",
+      "sha256": "372842d8f42ec6566efdb21590c511f1611da1f638b067cdcbeac72476c971f4"
+    },
+    {
+      "legacy": "Src/Tracealzer/SEGGER_RTT.c",
+      "canonical": "ThirdParty/SEGGER_RTT/Src/Tracealzer/SEGGER_RTT.c",
+      "sha256": "7373709c2e587cd1abd221a6f249f9a6e14d8c11ee0b3d75d701b973586f7369"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcAssert.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcAssert.c",
+      "sha256": "997f582f33a16fbb4d0292b28512aabafe337584d61d7f0930806c0a8b049584"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcCounter.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcCounter.c",
+      "sha256": "c10f5298a69471c0052250d630f25b5d311da0f37ee0aeb174f113cf4faad64c"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcDependency.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcDependency.c",
+      "sha256": "a45ab757fa77aae4ded6524ad4456b34817dc8acf8f4a11f7092dbc7200987e6"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcDiagnostics.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcDiagnostics.c",
+      "sha256": "5d4b431908d8b3e1fe9e2215cfe533b74084e4234a6d8119aa98af24125c39bc"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcEntryTable.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcEntryTable.c",
+      "sha256": "7eea2e34f67a65a25c430ff5bce5c8368e50d03a177083c2d19aa13bc77a0a65"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcError.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcError.c",
+      "sha256": "4834a0e465266e73a63ee626a7827cd2ee8894bcf60742b33995d85f5f63bdf5"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcEvent.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcEvent.c",
+      "sha256": "afbd1e452f03e2fadcc21e91fb2260128011c5508bb41df9bfa10008b0445c65"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcEventBuffer.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcEventBuffer.c",
+      "sha256": "6086384e9a3462da7adbf221c43ff06401ad4833bb93adc457b4f5aebe850490"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcExtension.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcExtension.c",
+      "sha256": "23dfa86cb6449dbe3e3d5c5cc2d69538ac06f3de185cafaa47d2fe5df7485d5d"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcHardwarePort.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcHardwarePort.c",
+      "sha256": "d03fb0db30aa457e07a251be23bd4655975e2d3dafe2e12589e40af355eb8d5f"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcHeap.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcHeap.c",
+      "sha256": "4d7fe03fc09ee234207ed62b32e32ebe06b04d29eb70cbdfb07517c0c258d2da"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcISR.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcISR.c",
+      "sha256": "facd3ddfeca9156447a7ba75d1df0e1f73bfe72db74c49e555ee05e9ef90a5f9"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcInternalEventBuffer.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcInternalEventBuffer.c",
+      "sha256": "c967f7ba3899d4f24bd9b6290c21177e04e28c360ffdb7728cf28309e655188b"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcInterval.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcInterval.c",
+      "sha256": "be9f7a880a5abe346f29f90765fd9b47308f597cdd3dc7f517b24f01bba209d5"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcKernelPort.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcKernelPort.c",
+      "sha256": "58025b0e93d27364a8cdc301cb3b0869233357f77200e4ea9666d34e2b75763c"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcMultiCoreEventBuffer.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcMultiCoreEventBuffer.c",
+      "sha256": "666ee23b95e5c462987c9e684afbe44952b951fe70bf598656ca966cc6cd241e"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcObject.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcObject.c",
+      "sha256": "6201c839f15c3c3010f929f4a94987a92aa9310898fa3ad991b3226dcb66be8e"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcPrint.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcPrint.c",
+      "sha256": "2e3eb6c160e93ce202320fc8afd224f44d6f8231fc5651ff8486154a0dab5acd"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcRunnable.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcRunnable.c",
+      "sha256": "3283e142d9d223fb7305a0bfd2967eccef79de169681d16a92a693eee32e4b8c"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcSnapshotRecorder.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcSnapshotRecorder.c",
+      "sha256": "e81d4784d7abfd4f817f17598175b6ba8ec44ab85c4abb1ac6ff36ebc15e1195"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcStackMonitor.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcStackMonitor.c",
+      "sha256": "c69e294cb49dd976f1623a9becdab35ae6956069d41fad290de7abc104daacb7"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcStateMachine.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcStateMachine.c",
+      "sha256": "e0286e38491c61927cc6cd0e64457ef20a5a73276225e9ebfdbfed6549f7acb6"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcStaticBuffer.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcStaticBuffer.c",
+      "sha256": "b5b9708b06c2a3103a28ba2320810fbfa7be74d8aae5f9cf550233d8426af40b"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcStreamPort.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcStreamPort.c",
+      "sha256": "43f478a5494e3a91245f9156837dbc4f3c52f9f6d6561bee6ff76bfed4f00d10"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcStreamingRecorder.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcStreamingRecorder.c",
+      "sha256": "5d6f92ce799f2f009bce54083c827a98770c5a9f1704984a5d529a99f4a48cef"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcString.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcString.c",
+      "sha256": "4e6cc942a1dfcb34f81f31e62585d592a86b7be588d54d6b68237532053d4086"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcTask.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcTask.c",
+      "sha256": "1d6eb87df90c07c43b9c8adbecca95318cd837b425c6cccdfb28d7bc32fce755"
+    },
+    {
+      "legacy": "Src/Tracealzer/trcTimestamp.c",
+      "canonical": "ThirdParty/TraceRecorder/Src/Tracealzer/trcTimestamp.c",
+      "sha256": "859d629b53f7dc4e19e5e2399934ed200e0de27489cacca11dfe874f82763463"
+    },
+    {
+      "legacy": "Src/Camera/ov2640.c",
+      "canonical": "Drivers/Camera/Src/Camera/ov2640.c",
+      "sha256": "c361c780076d803b99fd29f5aa229c6bdae866bad6853d4e5b26e629b87767e7"
+    },
+    {
+      "legacy": "Src/Camera/ov5640.c",
+      "canonical": "Drivers/Camera/Src/Camera/ov5640.c",
+      "sha256": "effdfcaf777eb4becb8071749b5a2a67d91c9271ea2950c09de0d8d6a565f638"
+    },
+    {
+      "legacy": "Src/Camera/ov5640_reg.c",
+      "canonical": "Drivers/Camera/Src/Camera/ov5640_reg.c",
+      "sha256": "d1e2227c60cee7fd85a8aa206e97855e165a829e841f93546d6e786abab5b7c1"
+    },
+    {
+      "legacy": "Src/L051C8T6/Eeprom.c",
+      "canonical": "Drivers/STM32L0/Src/L051C8T6/Eeprom.c",
+      "sha256": "0535d9ab547970d641a20b8960e2eb053b8d9b494f3ee71b3f2abb04003c48f1"
+    },
+    {
+      "legacy": "Src/Display/EPD/epd_uc8253.c",
+      "canonical": "Drivers/EPD/Src/Display/EPD/epd_uc8253.c",
+      "sha256": "da8058a4f85c8d0c4a0b0eaad262779922ef6f53c7441deebee814dcfd9bc4fe"
+    },
+    {
+      "legacy": "Src/RF24L01.c",
+      "canonical": "Drivers/Radio/Src/RF24L01.c",
+      "sha256": "979e49522430a2a264ae4fcfc132ea2064081a742d0d1bc025503c6db4a22163"
+    }
+  ]
+}
